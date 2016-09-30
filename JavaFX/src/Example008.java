@@ -29,7 +29,15 @@ public class Example008 extends Application {
 		primaryStage.show();
 		// add the text and the checkbox to the layout
 		vb.getChildren().addAll(label_display, cb_checkbox);
-		// 02 code goes here
+		cb_checkbox.setOnAction(new EventHandler<ActionEvent>() {
+			public void handle(ActionEvent event) {
+				if (cb_checkbox.isSelected()) {
+					label_display.setText("CheckBox is checked");
+				} else {
+					label_display.setText("CheckBox is unchecked");
+				}
+			}
+		});
 	}
 
 	// overridden stop method
