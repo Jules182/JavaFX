@@ -29,14 +29,14 @@ public class Example010 extends Application {
 		tf_username = new TextField();
 		pf_password = new PasswordField();
 		gp_userpass = new GridPane();
-		
+
 		// put the texts and fields together in a grid pane layout
 		gp_userpass.add(label_ulabel, 0, 0);
 		gp_userpass.add(label_plabel, 0, 1);
 		gp_userpass.add(tf_username, 1, 0);
 		gp_userpass.add(pf_password, 1, 1);
 		GridPane.setHgrow(tf_username, Priority.ALWAYS);
-		GridPane.setHgrow(pf_password, Priority.ALWAYS);	
+		GridPane.setHgrow(pf_password, Priority.ALWAYS);
 	}
 
 	@Override
@@ -47,27 +47,27 @@ public class Example010 extends Application {
 		primaryStage.show();
 
 		vb.getChildren().addAll(label_username, label_password, gp_userpass);
-	
-	tf_username.setOnAction(new EventHandler<ActionEvent>() {
-		// override this method to handle events
-		@Override
-		public void handle(ActionEvent event) {
-		// as the enter key has been pressed here we will update the label
-		// for the username to show what was entered
-		label_username.setText("Username is: " + tf_username.getText());
-		}
+
+		tf_username.setOnAction(new EventHandler<ActionEvent>() {
+			// override this method to handle events
+			@Override
+			public void handle(ActionEvent event) {
+				// as the enter key has been pressed here we will update the
+				// label
+				// for the username to show what was entered
+				label_username.setText("Username is: " + tf_username.getText());
+			}
 		});
-	
-	pf_password.setOnAction(new EventHandler<ActionEvent>() {
-		// override this method to handle events
-		@Override
-		public void handle(ActionEvent event) {
-		// as the enter key has been pressed here we will update the label
-		// for the password to show what was entered
-		label_password.setText("Password is: " + pf_password.getText());
-		}
+		// pwd with lambda
+		pf_password.setOnAction((event) -> {
+			// as the enter key has been pressed here we will update the
+			// label
+			// for the password to show what was entered
+			label_password.setText("Password is: " + pf_password.getText());
+
 		});
-}
+	}
+
 	public void stop() {
 	};
 
