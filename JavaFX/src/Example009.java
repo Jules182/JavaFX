@@ -38,25 +38,21 @@ public class Example009 extends Application {
 		primaryStage.show();
 
 		vb.getChildren().addAll(label_display, rb1, rb2, rb3);
-
+		
+//without Java 8 Lambda
 		rb1.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
 				label_display.setText("Radio Button 1 selected");
 			}
 		});
-
-		rb2.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent event) {
-				label_display.setText("Radio Button 2 selected");
-			}
+		// with Lambda
+		rb2.setOnAction((event) -> {
+			label_display.setText("Radio Button 2 selected");
 		});
-		rb3.setOnAction(new EventHandler<ActionEvent>() {
-			@Override
-			public void handle(ActionEvent event) {
-				label_display.setText("Radio Button 3 selected");
-			}
+
+		rb3.setOnAction((event) -> {
+			label_display.setText("Radio Button 3 selected");
 		});
 
 	}
