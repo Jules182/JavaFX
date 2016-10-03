@@ -1,12 +1,7 @@
 # JavaFX #
 
 JavaFX is a repository for the HCI / GUI Programming Couse at Griffith College Dublin.
-
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+It includes the Examples from the guideline offered by lecturer.
 
 ### How do I get set up? ###
 
