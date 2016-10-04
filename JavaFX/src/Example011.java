@@ -20,18 +20,13 @@ public class Example011 extends Application {
 		vb_mainlayout.getChildren().addAll(ta_textarea, ta_response);
 		ta_response.setEditable(false);
 
-		ta_textarea.textProperty().addListener(new ChangeListener<String>() {
-
-			@Override
-			public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-				ta_response.setText(newValue);
-			}
+		ta_textarea.textProperty().addListener((observable, oldValue, newValue) -> {
+			ta_response.setText(newValue);
 		});
 	}
 
 	@Override
 	public void stop() throws Exception {
-		// TODO Auto-generated method stub
 		super.stop();
 	}
 
@@ -39,8 +34,8 @@ public class Example011 extends Application {
 	public void start(Stage primaryStage) throws Exception {
 		primaryStage.setTitle("Example 11 - Text Area");
 		primaryStage.setScene(new Scene(vb_mainlayout, 500, 500));
-		primaryStage.show();	
-		
+		primaryStage.show();
+
 	}
 
 	public static void main(String[] args) {
