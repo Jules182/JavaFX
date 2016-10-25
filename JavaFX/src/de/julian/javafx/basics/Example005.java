@@ -1,3 +1,4 @@
+package de.julian.javafx.basics;
 // example that shows how the grid pane layout works
 // imports
 import javafx.application.Application;

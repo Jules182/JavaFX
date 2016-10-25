@@ -1,3 +1,4 @@
+package de.julian.javafx.basics;
 
 // simple example that introduces the border pane with the use of buttons
 // imports

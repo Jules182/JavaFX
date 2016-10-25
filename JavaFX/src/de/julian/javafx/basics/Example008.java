@@ -1,3 +1,4 @@
+package de.julian.javafx.basics;
 
 // simple example that showcases the checkbox
 // imports necessary to make this project work

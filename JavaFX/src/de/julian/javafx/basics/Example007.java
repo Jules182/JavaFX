@@ -1,3 +1,4 @@
+package de.julian.javafx.basics;
 
 // simple javafx program showcasing the toggle button
 // imports

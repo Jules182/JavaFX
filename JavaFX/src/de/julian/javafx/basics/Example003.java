@@ -1,11 +1,12 @@
+package de.julian.javafx.basics;
 // imports
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 // class definition
-public class Example004 extends Application {
+public class Example003 extends Application {
 // the init method
 public void init() {
 // initialise the 5 buttons
@@ -19,13 +20,13 @@ btn5 = new Button("Button 5");
 public void start(Stage primaryStage) {
 	// set the title of our stage, create our layout as the root of the scene,
 	// and set our stage size
-	primaryStage.setTitle("VBox Layout Example");
-	VBox vb = new VBox();
-	primaryStage.setScene(new Scene(vb, 400, 300));
-	vb.setSpacing(10);
-	vb.setStyle("-fx-background-color: #888888");
+	primaryStage.setTitle("HBox Layout Example");
+	HBox hb = new HBox();
+	primaryStage.setScene(new Scene(hb, 400, 300));
+	hb.setSpacing(10);
+	hb.setStyle("-fx-background-color: #888888");
 	// add the 5 buttons to the hbox layout
-	vb.getChildren().addAll(btn1, btn2, btn3, btn4, btn5);
+	hb.getChildren().addAll(btn1, btn2, btn3, btn4, btn5);
 	// show the stage
 	primaryStage.show();
 }

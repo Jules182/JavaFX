@@ -1,3 +1,4 @@
+package de.julian.javafx.basics;
 
 // simple example that shows how the progress bar works
 // imports
