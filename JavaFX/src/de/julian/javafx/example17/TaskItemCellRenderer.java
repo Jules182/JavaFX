@@ -16,7 +16,6 @@ class TaskItemCellRenderer extends ListCell<TaskItem> {
 	public TaskItemCellRenderer(Example017 ref) {
 		// call the superclass constructor
 		super();
-		this.ref = ref;
 		// initialise all of our widgets and layouts
 		hb_mainlayout = new HBox();
 		cb_done = new CheckBox();
@@ -53,7 +52,4 @@ class TaskItemCellRenderer extends ListCell<TaskItem> {
 	private HBox hb_mainlayout;
 	private CheckBox cb_done;
 	private Label lbl_task_name;
-	// reference to the application so we can update the application should
-	// a change happen in a list item
-	private Example017 ref;
 }
